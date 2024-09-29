@@ -15,8 +15,10 @@ def main():
     # Get settings from settings.json
     with open("settings.json") as f:
         settings = json.load(f)
-        user_id = settings["atcoder_user"]["id"]
-        last_update = settings["last_update"]
+        user_id = settings["user_id"]
+
+    with open("submissions/LastUpdate") as f:
+        last_update = int(f.read())
 
     api_url = f"https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions/?user={user_id}&from_second={last_update}"
 
@@ -26,9 +28,9 @@ def main():
 
     # Extract get data
     submissions.sort(key=lambda x: x["id"])
-    settings["last_update"] = submissions[-1]["epoch_second"] + 1
-    with open("settings.json", "w") as f:
-        json.dump(settings, f)
+
+    with open("submissions/LastUpdate", "w") as f:
+        f.write(str(submissions[-1]["epoch_second"] + 1))
 
     submission_div_contest = dict()
 
