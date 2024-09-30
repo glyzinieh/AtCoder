@@ -1,7 +1,5 @@
-import html
 import json
 import os
-import re
 import time
 
 import requests
@@ -26,6 +24,9 @@ def main():
     res = requests.get(api_url)
     submissions = res.json()
 
+    if not submissions:
+        return
+
     # Extract get data
     submissions.sort(key=lambda x: x["id"])
 
@@ -49,6 +50,7 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     driver = webdriver.Chrome(options=options)
+    driver.implicitly_wait(2)
 
     root_dir = "submissions"
     with tqdm(submission_div_contest.items()) as pbar1:
@@ -69,20 +71,13 @@ def main():
 
                     submission_url = f"https://atcoder.jp/contests/{contest_id}/submissions/{str(submission['id'])}"
                     driver.get(submission_url)
-                    code_element = driver.find_element(By.ID, "submission-code")
 
-                    inner_html = code_element.get_attribute("innerHTML")
-                    list_items = re.findall(r"<li[^>]*>.*?</li>", inner_html)
-                    lines = []
-                    for li in list_items:
-                        line1 = re.sub(r"<[^>]+>", "", li)
-                        line2 = re.sub(r"&nbsp;", "", line1)
-                        line3 = html.unescape(line2)
-                        lines.append(line3 + "\n")
-                    code = "".join(lines)
+                    code_elements = driver.find_elements(By.CSS_SELECTOR, ".ace_line")
+                    code_lines = [code_element.text for code_element in code_elements]
+                    source_code = "\n".join(code_lines)
 
                     with open(path, "w") as f:
-                        f.write(code)
+                        f.write(source_code)
 
                     time.sleep(3)
     driver.quit()
