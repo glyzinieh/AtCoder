@@ -3,7 +3,7 @@ name: Upload AtCoder Submissions
 on:
   schedule:
     # Every Monday at 00:00 JST
-    - cron: "0 15 * * MON"
+    - cron: "0 15 * * SUN"
   workflow_dispatch:
 
 permissions:
