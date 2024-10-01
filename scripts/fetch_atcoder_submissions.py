@@ -72,7 +72,7 @@ def main():
                     submission_url = f"https://atcoder.jp/contests/{contest_id}/submissions/{str(submission['id'])}"
                     driver.get(submission_url)
 
-                    script = "return $('#' + $(document.querySelector('span.btn-copy.btn-pre')).data('target')).text()"
+                    script = "return ace.edit('submission-code').getValue();"
                     source_code = driver.execute_script(script)
 
                     with open(path, "w") as f:
