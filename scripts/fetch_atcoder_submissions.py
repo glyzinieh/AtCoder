@@ -72,9 +72,8 @@ def main():
                     submission_url = f"https://atcoder.jp/contests/{contest_id}/submissions/{str(submission['id'])}"
                     driver.get(submission_url)
 
-                    code_elements = driver.find_elements(By.CSS_SELECTOR, ".ace_line")
-                    code_lines = [code_element.text for code_element in code_elements]
-                    source_code = "\n".join(code_lines)
+                    script = "return $('#' + $(document.querySelector('span.btn-copy.btn-pre')).data('target')).text()"
+                    source_code = driver.execute_script(script)
 
                     with open(path, "w") as f:
                         f.write(source_code)
