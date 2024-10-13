@@ -1,56 +1,53 @@
-from collections import deque
-
+import sys
+sys.setrecursionlimit(2000000)
 
 class Edge:
-  def __init__(self, u, v, w):
-    self.u = u
-    self.v = v
-    self.w = w
+    def __init__(self, u, v, w):
+        self.u = u
+        self.v = v
+        self.w = w
 
 
 class Point:
-  def __init__(self):
-    self.connects = list()
-    self.x = None
-    
-  def __str__(self):
-    return str(self.x)
-    
-    
+    def __init__(self):
+        self.connects = []
+        self.x = None
+
+    def __str__(self):
+        return str(self.x)
+
+
 class Graph:
-  def __init__(self, N):
-    self.points = [Point() for _ in range(N)]
-    self.edge_queue = deque()
-    
-  def add_edge(self, u:int, v:int, w:int):
-    self.points[u].connects.append(Edge(u, v,  w))
-    self.points[v].connects.append(Edge(v, u, -w))
-    
-  def append_edge_queue(self, point):
-    for edge in point.connects:
-      if self.points[edge.v].x is None:
-        self.edge_queue.append(edge)
-    
-  def solve(self):
-    for point in self.points:
-      if point.x is not None:
-        continue
-      point.x = 0
-      self.append_edge_queue(point)
-      while self.edge_queue:
-        edge = self.edge_queue.popleft()
-        point_u, point_v, w = self.points[edge.u], self.points[edge.v], edge.w
-        if point_v.x is not None:
-          continue
-        point_v.x = point_u.x + w
-        self.append_edge_queue(point_v)
-    return self.points
-    
-    
+    def __init__(self, N):
+        self.points = [Point() for _ in range(N)]
+
+    def add_edge(self, u: int, v: int, w: int):
+        self.points[u].connects.append(Edge(u, v, w))
+        self.points[v].connects.append(Edge(v, u, -w))
+
+    def dfs(self, point_u):
+        """再帰的に接続された頂点に対して値を設定"""
+        for edge in point_u.connects:
+            point_v = self.points[edge.v]
+            if point_v.x is None:
+                point_v.x = point_u.x + edge.w
+                self.dfs(point_v)
+
+    def solve(self):
+        for point in self.points:
+            if point.x is None:  # まだ値が設定されていない場合
+                point.x = 0  # 基準となる値を設定
+                self.dfs(point)  # 再帰的に設定
+        return self.points
+
+
+# 入力の処理
 N, M = map(int, input().split())
 graph = Graph(N)
 for _ in range(M):
-  u, v, w = map(int, input().split())
-  graph.add_edge(u-1, v-1, w)
+    u, v, w = map(int, input().split())
+    graph.add_edge(u - 1, v - 1, w)
+
+# 結果の出力
 ans = graph.solve()
 print(*ans)
