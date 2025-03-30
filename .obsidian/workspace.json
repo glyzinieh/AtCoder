@@ -1,0 +1,149 @@
+{
+  "main": {
+    "id": "9f917e6faf433d41",
+    "type": "split",
+    "children": [
+      {
+        "id": "2fb08987c4356e0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba3d57c54b11da86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/reflection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reflection"
+            }
+          },
+          {
+            "id": "5d64063735794974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/solution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "solution"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "494047b465a52f03",
+    "type": "split",
+    "children": [
+      {
+        "id": "d7a5fbcaf333d303",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6018854c82405c5a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "85b151be05ab5cde",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "87ebbf37321b11f4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b1c132b5cda0d2de",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a76025a247ff32a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "961e4676e4b93057",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 365.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "obsidian-git:Open Git source control": false,
+      "markdown-importer:Markdownインポーターを開く": false,
+      "random-note:ランダムノートを開く": false
+    }
+  },
+  "active": "6018854c82405c5a",
+  "lastOpenFiles": [
+    "solutions/回転.md",
+    "solutions/テスト.md",
+    "solutions/bit全探索.md",
+    "templates/solution.md",
+    "無題のファイル.md",
+    "solutions/貪欲法.md",
+    "README.md",
+    "reflections.md",
+    "reflections 1.md",
+    "solutions/二分探索.md",
+    "solutions/全探索.md",
+    "templates"
+  ]
+}
