@@ -15,7 +15,8 @@
               "state": {
                 "file": "templates/reflection.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "reflection"
@@ -29,7 +30,8 @@
               "state": {
                 "file": "templates/solution.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "solution"
@@ -49,7 +51,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6018854c82405c5a",
+            "id": "eb6baaa412d017f5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -62,7 +64,17 @@
             }
           },
           {
-            "id": "85b151be05ab5cde",
+            "id": "7d39d32ed2a6e343",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          },
+          {
+            "id": "5a321d9413f78070",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -76,16 +88,6 @@
               },
               "icon": "lucide-search",
               "title": "検索"
-            }
-          },
-          {
-            "id": "87ebbf37321b11f4",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "ブックマーク"
             }
           }
         ]
@@ -111,12 +113,89 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "32c517cff1bf8230",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "templates/reflection.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "reflectionからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "393d1693d2677206",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "templates/reflection.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "reflectionのアウトライン"
+            }
+          },
+          {
+            "id": "a176e6758dc2fa4d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "1726e149cd64cbc1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "templates/reflection.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "reflectionへのバックリンク"
+            }
+          },
+          {
+            "id": "8ee5c8092a23d151",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 365.5
+    "width": 283.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -131,7 +210,7 @@
       "random-note:ランダムノートを開く": false
     }
   },
-  "active": "6018854c82405c5a",
+  "active": "961e4676e4b93057",
   "lastOpenFiles": [
     "solutions/回転.md",
     "solutions/テスト.md",
