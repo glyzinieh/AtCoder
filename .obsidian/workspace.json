@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "abc404"
             }
+          },
+          {
+            "id": "4c342e3f8a1876b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "solutions/回転.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "回転"
+            }
+          },
+          {
+            "id": "88f4174a6f1fb309",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "solutions/グラフ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "グラフ"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -189,16 +218,17 @@
       "daily-notes:今日のデイリーノートを開く": false,
       "templates:テンプレートを挿入": false,
       "command-palette:コマンドパレットを開く": false,
-      "obsidian-git:Open Git source control": false,
       "markdown-importer:Markdownインポーターを開く": false,
-      "random-note:ランダムノートを開く": false
+      "random-note:ランダムノートを開く": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "96726fc9a1eb3392",
+  "active": "88f4174a6f1fb309",
   "lastOpenFiles": [
+    "solutions/回転.md",
+    "solutions/グラフ.md",
     "reflections/abc404.md",
     "reflections/abc401.md",
-    "solutions/回転.md",
     "reflections/abc375.md",
     "README.md",
     "solutions.md",
