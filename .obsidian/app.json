@@ -6,5 +6,6 @@
   "foldHeading": true,
   "showInlineTitle": false,
   "showUnsupportedFiles": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "newLinkFormat": "relative"
 }
