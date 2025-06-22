@@ -1,0 +1,1 @@
+print('Yes' if len(input()) >= int(input()) else 'No')
